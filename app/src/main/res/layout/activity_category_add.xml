@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroud="drawable/back01"
+    android:background="@color/white"
     tools:context=".CategoryAddActivity">
 
     <RelativeLayout
@@ -14,9 +14,10 @@
 
         <ImageButton
             android:id="@+id/backBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:src="@drawable/ic_back_white"
+            android:contentDescription="Back button"
             android:background="@android:color/transparent"
             android:layout_margin="10dp"
             android:padding="5dp"/>

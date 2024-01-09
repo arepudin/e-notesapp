@@ -75,10 +75,10 @@ public class CategoryAddActivity extends AppCompatActivity {
         progressDialog.setMessage("Adding category...");
         progressDialog.show();
 
-        //gete timestamp
+        //gate timestamp
         long timestamp = System.currentTimeMillis();
 
-        //setup info to add in firebass db
+        //setup info to add in firebase db
         HashMap<String, Object> hashMap = new HashMap<>();
         hashMap.put("id", ""+timestamp);
         hashMap.put("category", ""+category);

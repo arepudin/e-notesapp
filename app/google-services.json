@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "876503034986",
-    "project_id": "e-notes-app-5dd4b",
-    "storage_bucket": "e-notes-app-5dd4b.appspot.com"
+    "project_number": "1039996395556",
+    "project_id": "e-notesapp2nd",
+    "storage_bucket": "e-notesapp2nd.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:876503034986:android:c000ef80e9ffb0c00f6e13",
+        "mobilesdk_app_id": "1:1039996395556:android:96c56193e2a0df5f2ab8b1",
         "android_client_info": {
           "package_name": "com.example.e_notesapp"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDyW2V1BCU2e-4U__vh8JYPHNcP2PW2xyI"
+          "current_key": "AIzaSyCPhfpP8oiBcO6YEALx_9L_WDfU01oBSJQ"
         }
       ],
       "services": {

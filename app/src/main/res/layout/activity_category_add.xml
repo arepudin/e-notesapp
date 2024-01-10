@@ -61,7 +61,7 @@
             android:drawablePadding="10dp"
             android:hint="Category Title"
             android:inputType="textPersonName|textCapWords"
-            android:padding="@color/black"
+            android:padding="8dp"
             android:textColorHint="@color/black"/>
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -80,6 +80,7 @@
         android:textColor="@color/white"/>
 
 </RelativeLayout>
+
 
 
 

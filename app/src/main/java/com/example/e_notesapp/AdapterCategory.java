@@ -114,8 +114,8 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.Holder
     }
 
     @Override
-    public int getItemCount() {
-        return 0;
+    public int getItemCount(){
+        return categoryArrayList.size();
     }
 
     @Override

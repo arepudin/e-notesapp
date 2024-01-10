@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 
 import com.example.e_notesapp.databinding.ActivityDashboardAdminBinding;
@@ -50,15 +51,14 @@ public class DashboardAdminActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                //called as and when user type each letter
+                // called as and when the user types each letter
                 try {
                     adapterCategory.getFilter().filter(s);
+                } catch (Exception e) {
+                    e.printStackTrace(); // Log the exception or handle it appropriately
                 }
-                catch (Exception e){
-
-                }
-
             }
+
 
             @Override
             public void afterTextChanged(Editable s) {
@@ -118,21 +118,24 @@ public class DashboardAdminActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                // Log or handle the error
+                Log.e("DashboardAdminActivity", "DatabaseError: " + error.getMessage());
             }
+
         });
     }
 
     private void checkUser() {
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-        if(firebaseUser==null){
-            startActivity(new Intent(this,MainActivity.class));
+        if (firebaseUser == null) {
+            startActivity(new Intent(this, MainActivity.class));
             finish();
-        }
-        else {
+        } else {
             String email = firebaseUser.getEmail();
-
-            binding.subtitleIv.setText(email);
+            if (email != null) {
+                binding.subtitleIv.setText(email);
+            }
         }
     }
+
 }

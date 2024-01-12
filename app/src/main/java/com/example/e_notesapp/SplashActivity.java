@@ -40,14 +40,14 @@ public class SplashActivity extends AppCompatActivity {
             finish();
         }
         else{
-            DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
+            DatabaseReference ref = FirebaseDatabase.getInstance().getReference("admin");
             ref.child(firebaseUser.getUid())
                     .addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot snapshot) {
                             String userType = ""+snapshot.child("userType").getValue();
-                            if (userType.equals("user")){
-                                startActivity(new Intent(SplashActivity.this,DashboardUserActivity.class));
+                            if (userType.equals("admin")){
+                                startActivity(new Intent(SplashActivity.this,DashboardAdminActivity.class));
                                 finish();
                             } else if (userType.equals("admin")) {
                                 startActivity(new Intent(SplashActivity.this,DashboardAdminActivity.class));

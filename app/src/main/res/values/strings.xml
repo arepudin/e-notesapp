@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">e-notesapp</string>
     <string name="new_user_signup">New user? <b>SignUp</b></string><!--make SignUp bold-->
+    <string name="linktosite">https://github.com/arepudin/e-notesapp</string>
 </resources>

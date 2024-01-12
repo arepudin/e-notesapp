@@ -103,8 +103,8 @@ public class LoginActivity extends AppCompatActivity {
                     public void onDataChange(DataSnapshot snapshot) {
                         progressDialog.dismiss();
                         String userType = ""+snapshot.child("userType").getValue();
-                        if (userType.equals("user")){
-                            startActivity(new Intent(LoginActivity.this,DashboardUserActivity.class));
+                        if (userType.equals("admin")){
+                            startActivity(new Intent(LoginActivity.this,DashboardAdminActivity.class));
                             finish();
                         } else if (userType.equals("admin")) {
                             startActivity(new Intent(LoginActivity.this,DashboardAdminActivity.class));

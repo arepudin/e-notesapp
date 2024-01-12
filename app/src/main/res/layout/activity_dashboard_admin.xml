@@ -20,7 +20,7 @@
             android:layout_marginTop="8dp"
             android:layout_centerHorizontal="true"
             android:layout_height="wrap_content"
-            android:text="Dashboard Admin"
+            android:text="Dashboard"
             android:textStyle="bold"
             android:textColor="@color/white"/>
 
@@ -43,6 +43,15 @@
             android:layout_marginEnd="10dp"
             android:contentDescription="Logout"
             android:background="@android:color/transparent"/>
+
+        <ImageButton
+            android:id="@+id/aboutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@android:drawable/ic_dialog_info"/>
 
     </RelativeLayout>
 

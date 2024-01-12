@@ -117,10 +117,10 @@ public class RegisterActivity extends AppCompatActivity {
         hashMap.put("email",email);
         hashMap.put("name",name);
         hashMap.put("profileImage","");
-        hashMap.put("userType","user");
+        hashMap.put("userType","admin");
         hashMap.put("timeStamp",timestamp);
 
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("admin");
         ref.child(uid)
                 .setValue(hashMap)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -130,7 +130,7 @@ public class RegisterActivity extends AppCompatActivity {
                         progressDialog.dismiss();
                         Toast.makeText(RegisterActivity.this, "Account created...", Toast.LENGTH_SHORT).show();
 
-                        startActivity(new Intent(RegisterActivity.this,DashboardUserActivity.class));
+                        startActivity(new Intent(RegisterActivity.this,DashboardAdminActivity.class));
                         finish();
                     }
                 })

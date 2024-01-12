@@ -91,6 +91,14 @@ public class DashboardAdminActivity extends AppCompatActivity {
                 startActivity(new Intent(DashboardAdminActivity.this,  PdfAddActivity.class));
             }
         });
+
+        //handle click, start about button
+        binding.aboutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DashboardAdminActivity.this,  AboutPage.class));
+            }
+        });
     }
 
     private void loadCategories() {

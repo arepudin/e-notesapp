@@ -10,7 +10,9 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 
+import com.example.e_notesapp.adapters.AdapterCategory;
 import com.example.e_notesapp.databinding.ActivityDashboardAdminBinding;
+import com.example.e_notesapp.models.ModelCategory;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;

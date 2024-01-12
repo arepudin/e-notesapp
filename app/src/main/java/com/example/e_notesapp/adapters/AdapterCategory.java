@@ -1,8 +1,9 @@
-package com.example.e_notesapp;
+package com.example.e_notesapp.adapters;
 
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,13 +16,15 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.e_notesapp.PdfListAdminActivity;
+import com.example.e_notesapp.filters.FilterCategory;
+import com.example.e_notesapp.models.ModelCategory;
 import com.example.e_notesapp.databinding.RowCategoryBinding;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.HolderCategory> implements Filterable {
@@ -87,6 +90,16 @@ public class AdapterCategory extends RecyclerView.Adapter<AdapterCategory.Holder
             }
         });
 
+        //handle item click, goto PdfListAdminActivity, also pass pdf category and categoryId
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, PdfListAdminActivity.class);
+                intent.putExtra("categoryId", id);
+                intent.putExtra("categoryTitle", category);
+                context.startActivity(intent);
+            }
+        });
 
     }
 

@@ -178,7 +178,7 @@ public class PdfAddActivity extends AppCompatActivity {
 
         String uid = firebaseAuth.getUid();
 
-        // Setup data to upload
+        // Setup data to upload, also add view count, download count while adding pdf.
         HashMap<String, Object> hashMap = new HashMap<>();
         hashMap.put("uid", "" + uid);
         hashMap.put("id", "" + timestamp);

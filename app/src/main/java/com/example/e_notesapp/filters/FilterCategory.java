@@ -1,6 +1,9 @@
-package com.example.e_notesapp;
+package com.example.e_notesapp.filters;
 
 import android.widget.Filter;
+
+import com.example.e_notesapp.adapters.AdapterCategory;
+import com.example.e_notesapp.models.ModelCategory;
 
 import java.util.ArrayList;
 
